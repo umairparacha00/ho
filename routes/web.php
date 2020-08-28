@@ -1,7 +1,7 @@
 <?php
 
-	use App\Notifications\umair;
 	use App\User;
+	use App\Notifications\umair;
 	use Illuminate\Support\Facades\Route;
 
 	/*
@@ -19,7 +19,7 @@
 		return view('welcome');
 	});
 
-	Auth::routes();
+	Auth::routes(['verify' => true]);
 	Route::middleware('auth')->group(function () {
 		Route::get('/home', 'HomeController@index')->name('home');
 		Route::get('/umair', function () {
